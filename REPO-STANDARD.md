@@ -69,8 +69,9 @@ does not apply (for example, the private `ion-tracker` has no public site).
 
 ## C. Branch policy and security (every repo, every tier)
 
-Enforced org-wide by the `default-branch-protection` ruleset, so new repos
-inherit it automatically. Per-repo settings must not weaken it:
+Enforced per repo today; to be enforced org-wide (including future repos),
+an owner runs the ruleset command at the end of this section once from a
+token with the `admin:org` scope. Per-repo settings must never weaken it:
 
 - `main` requires a pull request with **1 approval**, stale-review
   dismissal, and resolved conversations. Applies to admins.
@@ -78,6 +79,13 @@ inherit it automatically. Per-repo settings must not weaken it:
 - Secret scanning, push protection, and Dependabot security updates on
   (free for public repos; enable where the plan allows).
 - No required status checks until a repo has CI — then section D applies.
+- One-time org ruleset (covers future repos; needs a token with
+  `admin:org` scope — `gh auth refresh -s admin:org` — then run):
+
+```bash
+echo '{"name":"default-branch-protection","target":"branch","enforcement":"active","conditions":{"ref_name":{"include":["~DEFAULT_BRANCH"],"exclude":[]}},"rules":[{"type":"deletion"},{"type":"non_fast_forward"},{"type":"required_pull_request_reviews","parameters":{"required_approving_review_count":1,"dismiss_stale_reviews_on_push":true,"require_code_owner_review":false,"require_last_push_approval":false}},{"type":"required_review_thread_resolution","parameters":{}}],"bypass_actors":[]}' \
+  | gh api orgs/Foundation-0/rulesets -X POST --input -
+```
 
 ## D. Replayable results (Active tier and above)
 
@@ -137,7 +145,7 @@ tier that needs them:
 1. Confirm the tier the repo should meet.
 2. Identity: description, topics, website; README sections per tier.
 3. Credit: LICENSE, NOTICE, CONTRIBUTORS.md, CONTRIBUTING.md.
-4. Protection: covered by the org ruleset — verify, do not relax.
+4. Protection: PR + 1 approval, no force push/deletion on `main` — verify, do not relax.
 5. Active: first `results/` folder with PROOF.md, verify.py, certificate;
    Makefile; CI; templates; docs ledgers.
 6. Published: papers, CITATION.cff, .zenodo.json, Zenodo flip, releases,
