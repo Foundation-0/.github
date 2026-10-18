@@ -26,6 +26,7 @@ Claims are labelled **PROVEN**, **VERIFIED** (finite check), **KNOWN**
 | [medcode](https://github.com/Foundation-0/medcode) | Seed | MedCode static demo (private) |
 | [ion-tracker](https://github.com/Foundation-0/ion-tracker) | — | Proposal tracker (private) |
 | [demo-repository](https://github.com/Foundation-0/demo-repository) | — | GitHub template demo (private) |
+| [discussi0n](https://github.com/Foundation-0/discussi0n) | — | Org-wide discussion hub |
 
 ## Teams
 
