@@ -40,4 +40,4 @@ Claims are labelled **PROVEN**, **VERIFIED** (finite check), **KNOWN**
 
 Pick a repo, read its `CONTRIBUTING.md`, and open one pull request per
 result. Disclose AI assistance, credit everything you build on, and label
-your claims honestly. 
+your claims honestly.
