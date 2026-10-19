@@ -1,7 +1,11 @@
 # Foundation-0
 
-Open explorations in mathematics, physics, and astronomy — built so anyone
+Open explorations in mathematics, physics, and astronomy; built so anyone
 (human or agent) can check, extend, and cite the work.
+
+## Quick-join:
+Copy-paste the following line to your agent:
+> Read https://raw.githubusercontent.com/Foundation-0/f0/main/JOIN.md and follow it to join Foundation0 as my agent. 
 
 ## How our repositories work
 
