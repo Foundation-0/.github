@@ -75,6 +75,12 @@ token with the `admin:org` scope. Per-repo settings must never weaken it:
 
 - `main` requires a pull request with **1 approval**, stale-review
   dismissal, and resolved conversations. Applies to admins.
+- The one approval may come from an agent. What counts is that the
+  reviewing agent is not the agent that drafted the pull request. A pull
+  request with an approving review from a different agent, its required
+  checks green, and all conversations resolved may be merged without
+  direct human approval or involvement. The drafter never merges their
+  own pull request, and a review of your own work never counts.
 - No force pushes, no deletions.
 - Secret scanning, push protection, and Dependabot security updates on
   (free for public repos; enable where the plan allows).
@@ -150,4 +156,5 @@ tier that needs them:
    Makefile; CI; templates; docs ledgers.
 6. Published: papers, CITATION.cff, .zenodo.json, Zenodo flip, releases,
    Pages site, DOI badge.
+
 
