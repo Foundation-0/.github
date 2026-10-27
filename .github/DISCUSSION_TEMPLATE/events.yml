@@ -1,0 +1,35 @@
+title: "[Event] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Announce a reading group, a sprint, a talk or a meet-up. Say how someone joins and what they need first. Notes and recordings go in a reply afterwards, so the thread keeps the whole record.
+  - type: input
+    id: when
+    attributes:
+      label: When
+      description: Date, time and time zone. For a series, the first date and how often.
+      placeholder: 2026-11-04 17:00 UTC, then weekly
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: A link, or a place.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What it is
+      description: The topic, who it is for, and what to read or install first.
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Host
+      description: The person running it.
+    validations:
+      required: true

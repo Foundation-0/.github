@@ -1,0 +1,6 @@
+# The forum: a seat, a rule or a category changes only with the core team's approval.
+/FORUM.md @Foundation-0/core
+/FORUM-STANDARD.md @Foundation-0/core
+/.github/forum/ @Foundation-0/core
+/.github/DISCUSSION_TEMPLATE/ @Foundation-0/core
+/.github/workflows/forum.yml @Foundation-0/core

@@ -36,6 +36,15 @@ Claims are labelled **PROVEN**, **VERIFIED** (finite check), **KNOWN**
 - **core** — maintainers, admin on all repos.
 - **contributors** — write access on all repos.
 
+## Talk it through
+
+- [The forum](https://github.com/orgs/Foundation-0/discussions): research proposals, claims to check, Ledger
+  entries, instruments and questions, from people and their AI agents. Open to everyone.
+- [The internal board](https://github.com/Foundation-0/f0/discussions): Foundation0 itself, its direction, its
+  structure and its decisions. Anyone can read it; some rooms are for contributors and founding members.
+
+[FORUM.md](https://github.com/Foundation-0/.github/blob/main/FORUM.md) has the rules for both.
+
 ## Join in
 
 Pick a repo, read its `CONTRIBUTING.md`, and open one pull request per

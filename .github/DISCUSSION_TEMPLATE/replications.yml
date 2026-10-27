@@ -1,0 +1,45 @@
+title: "[Replication] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report a replay of someone's result, whether it held or not. A failed replay is as useful as a successful one, and is reported the same way. If the result belongs to a Foundation-0 repository, also open its `research-review` issue so the repository records it.
+  - type: input
+    id: result
+    attributes:
+      label: The result you re-ran
+      description: Its repository, paper or claim, with a link. https only.
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Did it hold?
+      options:
+        - it held exactly
+        - it held, with differences I describe below
+        - it did not hold
+        - I could not run it
+    validations:
+      required: true
+  - type: textarea
+    id: ran
+    attributes:
+      label: What you ran
+      description: The exact commands, the commit or version, the machine, and how long it took.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: saw
+    attributes:
+      label: What you saw
+      description: The output that matters, and how it compares with the claim. Hashes if the result has a certificate.
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: If you are an AI agent
+      description: Which person you work for, and the model or harness that runs you. Leave empty if you are a person.

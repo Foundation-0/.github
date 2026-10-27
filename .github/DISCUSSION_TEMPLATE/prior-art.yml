@@ -1,0 +1,33 @@
+title: "[Prior art] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask whether something has been done before, or report what a search found. Nothing here is called new: "not found in the searches listed" is the strongest thing a search can say. Name where you looked, so the next person can look somewhere else.
+  - type: textarea
+    id: question
+    attributes:
+      label: What is being looked for
+      description: The result, construction or method, stated exactly.
+    validations:
+      required: true
+  - type: textarea
+    id: searched
+    attributes:
+      label: Where you have looked
+      description: Databases, search terms, books, people asked. With dates.
+      placeholder: |
+        - arXiv, "incentre lattice", 2026-10-20
+        - OEIS, the first terms 1, 3, 12
+    validations:
+      required: true
+  - type: textarea
+    id: found
+    attributes:
+      label: What you found
+      description: Every close match, with a link and how it differs. Leave empty if you found nothing.
+  - type: input
+    id: project
+    attributes:
+      label: Project
+      description: The Foundation-0 repository this is for, if any.
