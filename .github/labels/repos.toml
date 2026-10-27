@@ -1,0 +1,246 @@
+# Every Foundation-0 repository: its custom properties and its topics, under the labelling standard
+# (LABELS-STANDARD.md). `sync.py repos plan` shows what differs on GitHub; `repos apply` sets it. Owners only.
+# Stages are the profile README's tiers; a research repository without a stage has not been assessed yet.
+
+version = 1
+org = "Foundation-0"
+required_topics = ["foundation-0"]
+
+[properties.kind]
+type = "multi_select"
+values = ["org-home", "core", "site", "hub", "research", "workspace", "anthology", "ops", "demo", "placeholder"]
+description = "What the repository is"
+
+[properties.domain]
+type = "multi_select"
+values = ["mathematics", "physics", "astronomy", "earth-science", "engineering", "medicine", "musicology", "science-of-science", "formal-verification", "ai-progress"]
+description = "What it is about"
+
+[properties.stage]
+type = "single_select"
+values = ["seed", "active", "published"]
+description = "Its tier under the Repository Standard"
+
+[properties.board]
+type = "single_select"
+values = ["main", "internal", "project", "none"]
+description = "Its discussion board under the forum standard"
+
+[properties.owner]
+type = "string"
+description = "The person or team who answers for it"
+
+[[repos]]
+name = ".github"
+kind = ["org-home"]
+board = "main"
+
+[[repos]]
+name = "f0"
+kind = ["core", "site"]
+domain = ["ai-progress", "mathematics"]
+stage = "active"
+board = "internal"
+topics = ["ai-progress", "mathematics"]
+
+[[repos]]
+name = "math0"
+kind = ["hub"]
+domain = ["mathematics"]
+stage = "active"
+board = "none"
+topics = ["mathematics"]
+
+[[repos]]
+name = "physics0"
+kind = ["hub"]
+domain = ["physics"]
+stage = "active"
+board = "none"
+topics = ["physics"]
+
+[[repos]]
+name = "astr0"
+kind = ["hub"]
+domain = ["astronomy"]
+stage = "seed"
+board = "none"
+topics = ["astronomy"]
+
+[[repos]]
+name = "st0a"
+kind = ["workspace"]
+board = "none"
+topics = ["ai-agents"]
+
+[[repos]]
+name = "incentre-lattices"
+kind = ["research", "site"]
+domain = ["mathematics"]
+stage = "published"
+board = "none"
+topics = ["mathematics"]
+
+[[repos]]
+name = "fractals"
+kind = ["research"]
+domain = ["mathematics", "physics"]
+stage = "active"
+board = "none"
+topics = ["mathematics", "physics"]
+
+[[repos]]
+name = "point-charges"
+kind = ["research"]
+domain = ["physics"]
+stage = "seed"
+board = "none"
+topics = ["physics"]
+
+[[repos]]
+name = "plate-eclipses"
+kind = ["research"]
+domain = ["astronomy"]
+stage = "seed"
+board = "none"
+topics = ["astronomy"]
+
+[[repos]]
+name = "lost-eclipses"
+kind = ["research"]
+domain = ["astronomy"]
+board = "none"
+topics = ["astronomy"]
+
+[[repos]]
+name = "plate-novae"
+kind = ["research"]
+domain = ["astronomy"]
+board = "none"
+topics = ["astronomy"]
+
+[[repos]]
+name = "gaia-dr4"
+kind = ["research"]
+domain = ["astronomy"]
+board = "none"
+topics = ["astronomy"]
+
+[[repos]]
+name = "wwssn-microseisms"
+kind = ["research"]
+domain = ["earth-science"]
+board = "none"
+topics = ["earth-science"]
+
+[[repos]]
+name = "certified-orbits"
+kind = ["research"]
+domain = ["mathematics", "physics"]
+board = "none"
+topics = ["mathematics", "physics"]
+
+[[repos]]
+name = "relative-equilibria"
+kind = ["research"]
+domain = ["mathematics", "physics"]
+board = "none"
+topics = ["mathematics", "physics"]
+
+[[repos]]
+name = "covering-min-modulus"
+kind = ["research"]
+domain = ["mathematics"]
+board = "none"
+topics = ["mathematics"]
+
+[[repos]]
+name = "rigid-realizations"
+kind = ["research"]
+domain = ["mathematics"]
+board = "none"
+topics = ["mathematics"]
+
+[[repos]]
+name = "gfq-codes"
+kind = ["research"]
+domain = ["mathematics"]
+board = "none"
+topics = ["mathematics"]
+
+[[repos]]
+name = "finite-state-proofs"
+kind = ["research"]
+domain = ["formal-verification"]
+board = "none"
+topics = ["formal-verification"]
+
+[[repos]]
+name = "formal-claims-audit"
+kind = ["research"]
+domain = ["formal-verification", "ai-progress"]
+board = "none"
+topics = ["formal-verification", "ai-progress"]
+
+[[repos]]
+name = "rism-anon"
+kind = ["research"]
+domain = ["musicology"]
+board = "none"
+topics = ["musicology"]
+
+[[repos]]
+name = "overdue-data"
+kind = ["research"]
+domain = ["science-of-science"]
+board = "none"
+topics = ["science-of-science"]
+
+[[repos]]
+name = "cfrp-strengthening"
+kind = ["research"]
+domain = ["engineering"]
+board = "none"
+topics = ["engineering"]
+
+[[repos]]
+name = "project-asma"
+kind = ["research"]
+domain = ["medicine"]
+board = "none"
+topics = ["medicine"]
+
+[[repos]]
+name = "discussi0n"
+kind = ["placeholder"]
+board = "none"
+# a placeholder; archive it (FORUM.md)
+
+[[repos]]
+name = "proven-commons"
+kind = ["anthology"]
+domain = ["formal-verification"]
+board = "none"
+topics = ["formal-verification"]
+
+[[repos]]
+name = "medcode"
+kind = ["demo"]
+domain = ["medicine"]
+stage = "seed"
+board = "none"
+topics = ["medicine"]
+labels = false
+# a private fork
+
+[[repos]]
+name = "ion-tracker"
+kind = ["ops"]
+board = "none"
+
+[[repos]]
+name = "demo-repository"
+kind = ["demo"]
+board = "none"
+labels = false
+# archived

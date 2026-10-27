@@ -4,3 +4,10 @@
 /.github/forum/ @Foundation-0/core
 /.github/DISCUSSION_TEMPLATE/ @Foundation-0/core
 /.github/workflows/forum.yml @Foundation-0/core
+# The labelling standard: a dimension, a label or a repository's properties change only with the same approval.
+/LABELS-STANDARD.md @Foundation-0/core
+/.github/labels/ @Foundation-0/core
+/.github/ISSUE_TEMPLATE/ @Foundation-0/core
+/.github/pull_request_template.md @Foundation-0/core
+/.github/workflows/labels.yml @Foundation-0/core
+/workflow-templates/ @Foundation-0/core

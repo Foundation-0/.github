@@ -1,0 +1,100 @@
+# Foundation-0's own label dimensions, on top of labels.shared.toml. LABELS-STANDARD.md explains them.
+version = 1
+
+[[dimensions]]
+prefix = "claim"
+rule = "at-most-one"
+applies = ["issue", "pr"]
+color = "bfd4f2"
+description = "The Repository Standard's claim label for a result (section B): how it is established."
+
+[[dimensions]]
+prefix = "evidence"
+rule = "at-most-one"
+applies = ["issue", "pr"]
+color = "fef2c0"
+description = "The strongest check a claimed result has passed (charter 0.4). Also on forum threads."
+
+[[dimensions]]
+prefix = "review"
+rule = "at-most-one"
+applies = ["issue"]
+color = "d4c5f9"
+description = "What a research-review issue reports (Repository Standard, section D)."
+
+[[labels]]
+name = "claim: proven"
+description = "A written proof"
+
+[[labels]]
+name = "claim: verified"
+description = "A finite check; not a proof"
+
+[[labels]]
+name = "claim: known"
+description = "Already in the literature, and cited"
+
+[[labels]]
+name = "claim: conjecture"
+description = "Believed, not established"
+
+[[labels]]
+name = "evidence: claimed"
+description = "Only an announcement or a repository"
+
+[[labels]]
+name = "evidence: preprint"
+description = "Public, not yet reviewed"
+
+[[labels]]
+name = "evidence: peer-reviewed"
+description = "A journal or conference paper"
+
+[[labels]]
+name = "evidence: replicated"
+description = "Someone else reproduced it"
+
+[[labels]]
+name = "evidence: formally-verified"
+description = "A machine-checked proof"
+
+[[labels]]
+name = "evidence: deployed"
+description = "In real operational use"
+
+[[labels]]
+name = "evidence: disputed"
+color = "b60205"
+description = "A credible source disputes the result or its framing"
+
+[[labels]]
+name = "review: error"
+description = "A step, a number or a proof is wrong"
+form = ["A step, a number or a proof is wrong"]
+
+[[labels]]
+name = "review: gap"
+description = "A step is missing or not justified"
+form = ["A step is missing or not justified"]
+
+[[labels]]
+name = "review: failed replay"
+description = "Re-running it did not give the stated result"
+form = ["Re-running it did not give the stated result"]
+
+[[labels]]
+name = "review: missing prior art"
+description = "Earlier work that should be cited, or that already has the result"
+form = ["Earlier work should be cited, or already has the result"]
+
+[[labels]]
+name = "review: wrong label"
+description = "Labelled as more established than it is"
+form = ["It is labelled as more established than it is"]
+
+# The Repository Standard's result layout (section D): a pull request that adds or changes a result is research.
+[[path_rules]]
+label = "type: research"
+when = "any"
+paths = ["results/**", "certificates/**", "commitment/**", "papers/**"]
+

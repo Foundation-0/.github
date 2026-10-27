@@ -95,8 +95,9 @@ Foundation-0 repository that turns on a board of its own.
 
 **Labels.** Every thread about one repository carries its `project:` label (`project: math0`,
 `project: lost-eclipses`, …), so a repository without a board of its own still has its threads in one place:
-the label's page. Claims carry an `evidence:` label for the strongest check they have passed. `gate.py labels`
-makes them all.
+the label's page. `gate.py labels` makes them. Claims carry an `evidence:` label for the strongest check they
+have passed; those come from the [labelling standard](LABELS-STANDARD.md), like every issue and pull request
+label in the organisation.
 
 ## Which repositories have a board
 

@@ -294,38 +294,3 @@ description = "Threads about Foundation-0/cfrp-strengthening"
 name = "project: project-asma"
 color = "1d76db"
 description = "Threads about Foundation-0/project-asma"
-
-[[labels]]
-name = "evidence: claimed"
-color = "fbca04"
-description = "Only an announcement or a repository"
-
-[[labels]]
-name = "evidence: preprint"
-color = "fbca04"
-description = "Public, not yet reviewed"
-
-[[labels]]
-name = "evidence: peer-reviewed"
-color = "fbca04"
-description = "A journal or conference paper"
-
-[[labels]]
-name = "evidence: replicated"
-color = "fbca04"
-description = "Someone else reproduced it"
-
-[[labels]]
-name = "evidence: formally-verified"
-color = "fbca04"
-description = "A machine-checked proof"
-
-[[labels]]
-name = "evidence: deployed"
-color = "fbca04"
-description = "In real operational use"
-
-[[labels]]
-name = "evidence: disputed"
-color = "b60205"
-description = "A credible source disputes the result or its framing"
