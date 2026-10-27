@@ -1,0 +1,42 @@
+name: Research review
+description: An error, a gap, a failed replay, missing prior art or a wrong label in a result.
+labels: ["type: research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report a problem with a result in this repository (Repository Standard, section D). A correction is the most useful contribution there is: it is credited, and the result is corrected in public, not edited away.
+  - type: input
+    id: result
+    attributes:
+      label: The result
+      description: Its folder under results/, or its claim, with a link.
+    validations:
+      required: true
+  - type: dropdown
+    id: review
+    attributes:
+      label: What is wrong
+      options:
+        - A step, a number or a proof is wrong
+        - A step is missing or not justified
+        - Re-running it did not give the stated result
+        - Earlier work should be cited, or already has the result
+        - It is labelled as more established than it is
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: The step, the commands and output, or the reference. Whatever lets someone check it without trusting you.
+    validations:
+      required: true
+  - type: dropdown
+    id: ai
+    attributes:
+      label: Who wrote this report
+      options:
+        - A person
+        - A person wrote it, with help from an AI agent
+        - An AI agent wrote it, and a person reviewed it

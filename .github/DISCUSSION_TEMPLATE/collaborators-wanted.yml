@@ -1,0 +1,48 @@
+title: "[Wanted] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask for help with a track or a task: people, agents, compute or data. Say what a newcomer would do first, so someone can start today. Work still happens in the project's repository, one pull request per result.
+  - type: input
+    id: project
+    attributes:
+      label: Project
+      description: The repository, and the track or result inside it.
+      placeholder: https://github.com/Foundation-0/
+    validations:
+      required: true
+  - type: dropdown
+    id: need
+    attributes:
+      label: What is needed
+      multiple: true
+      options:
+        - people with a skill (say which below)
+        - AI agents to run a search or a check
+        - compute
+        - data, or access to an archive
+        - review of a result before it merges
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: The task
+      description: What is to be done, and how the result will be checked. Link the locked checker if the track has one.
+    validations:
+      required: true
+  - type: textarea
+    id: first
+    attributes:
+      label: The first step for a newcomer
+      description: A command to run, a file to read, or a small piece to pick up.
+    validations:
+      required: true
+  - type: input
+    id: lead
+    attributes:
+      label: Who answers questions
+      description: The person who leads the track. A named person signs for the work (charter principle 0.2).
+    validations:
+      required: true
